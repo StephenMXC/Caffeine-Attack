@@ -80,10 +80,12 @@ main {
   padding: 0 16px;
 }
 
+/* ...existing code... */
 .brand img {
-  width: 150px;
   height: auto;
 }
+
+/* ...existing code... */
 
 .brand {
   font-family: 'Kode Mono', sans-serif;
@@ -94,7 +96,7 @@ main {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  max-width: 600px;
+  max-width: 400px;
 }
 
 
@@ -181,7 +183,7 @@ h4 {
     color: #ff0000;
 
   }
-  
+
 }
 
 .menu-section {
@@ -217,18 +219,23 @@ footer .footer-links {
   justify-content: space-between;
   width: 100%;
   max-width: 25%;
-  
+
 
 
 }
 
-footer .footer-links>li>a {
-  color: var(--tertiary); 
+
+.flinks {
+  color: yellow;
+  text-decoration: none;
+  font-family: 'Tektur', monospace;
 }
-.menu-card button{
+
+.menu-card button {
   display: none;
 }
-.menu-card:hover button{ 
+
+.menu-card:hover button {
   background: rgb(255, 0, 0);
   color: #000000;
   border: none;
@@ -242,53 +249,55 @@ footer .footer-links>li>a {
   &:hover {
     transform: scale(1.05);
     background: #cc00ff;
-    color: #000000; 
+    color: #000000;
     transition: opacity 0.3s ease;
     font-family: var(--font1);
-    
 
 
-  
+
+
   }
 
 }
+
 .menu-card {
   display: flex;
   align-items: start;
   justify-content: space-between;
   color: var(--tertiary);
   border: 10px solid var(--secondary);
-  flex-direction:column;
+  flex-direction: column;
   /* up right down left (for margins as well as padding) */
   /* y-axis (up and down) x-axis: (right and left) */
-  padding: 20px 20px ;    
+  padding: 20px 20px;
   max-width: 390px;
-  width : 100%;
-  height : 200px;
+  width: 100%;
+  height: 200px;
   margin: 10px;
   border: 2px solid var(--tertiary);
   box-shadow: 0 4px 8px rgba(233, 0, 245, 0.954);
-   &:hover {
+
+  &:hover {
     transform: scale(1.02);
     transition: all 0.5s ease-in-out;
     box-shadow: 0 4px 8px rgba(255, 0, 0, 0.708);
     cursor: pointer;
     background-color: #efef08;
-    
+
   }
-  
-  
+
+
 }
 
 
-.drink-desc{
+.drink-desc {
   font-family: var(--font);
   font-size: 20px;
   color: #000000;
   margin: 2px;
 }
 
-.subtext{
+.subtext {
   font-family: var(--font2);
   font-size: 20px;
   color: var(--tertiatry);
@@ -303,10 +312,10 @@ footer .footer-links>li>a {
   justify-content: space-between;
   flex-wrap: wrap;
   margin-top: 20px;
-  
- 
-  
-  
+
+
+
+
 }
 
 .drink-name {
@@ -315,8 +324,8 @@ footer .footer-links>li>a {
   justify-content: space-between;
   flex-wrap: wrap;
   margin: 2px;
-  
-  
+
+
 }
 
 footer {
@@ -352,9 +361,106 @@ footer {
 } */
 
 
-.price-drink{
+.price-drink {
   font-family: var(--font2);
   font-size: 15px;
   color: var(--tertiary);
   margin: 2px;
+}
+
+.card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+/* Responsive logo image sizing */
+@media (min-width: 1023px) {
+  .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .brand img {
+    width: 150px;
+  }
+
+  .logo-text {
+    font-size: 50px;
+
+
+  }
+
+  footer .footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    max-width:400px
+
+
+  }
+
+}
+
+@media (min-width: 768px) {
+  .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+
+  .brand img {
+    width: 100px;
+  }
+
+  .logo-text {
+    font-size: 35px;
+
+
+  }
+
+  footer .footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    max-width:400px
+
+
+  }
+}
+
+@media (max-width: 320px) {
+  .nav-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  .brand img {
+    width: 75px;
+  }
+
+  .logo-text {
+    font-size: 25px;
+
+
+  }
+
+  footer .footer-links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    max-width:400px
+
+
+  }
+
 }
